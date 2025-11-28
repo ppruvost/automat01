@@ -82,9 +82,6 @@ function stopMusic() {
     audio.currentTime = 0;
 }
 
-// Lancer la musique dès que la page est prête (sans interaction de l'utilisateur)
-document.addEventListener("DOMContentLoaded", () => {
-    startMusic();
 });
 
 /* ============================================================
@@ -189,6 +186,7 @@ function endQuiz() {
 
 // Lancement du quiz
 document.getElementById("startQuiz").addEventListener("click", () => {
+    startMusic(); // <-- la musique démarre au moment où l'utilisateur clique
     const nom = document.getElementById("nom").value.trim();
     const prenom = document.getElementById("prenom").value.trim();
 
