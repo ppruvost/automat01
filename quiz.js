@@ -150,16 +150,16 @@ function validateAnswer() {
     current++;
 
     if (current < shuffledQuestions.length) {
-        setTimeout(showQuestion, 2500);
+        setTimeout(showQuestion, 3000);
     } else {
-        setTimeout(endQuiz, 2500);
+        setTimeout(endQuiz, 3000);
     }
 }
 
 // fin du quiz
 function endQuiz() {
     document.getElementById("quiz").innerHTML = `
-        <h2>Quiz terminé !</h2>
+        <h2>Automatisme terminé !</h2>
         <p>Score final : ${score} / ${shuffledQuestions.length}</p>`;
 }
 
